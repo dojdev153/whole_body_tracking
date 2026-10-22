@@ -1,0 +1,67 @@
+﻿# ==============================================================================
+# .gitignore - Whole Body Tracking & Face Association System
+# ==============================================================================
+
+# Byte-compiled / optimized / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+.pytest_cache/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Large Model Weights (>100MB exceeds GitHub's hard file limit)
+models/*.onnx
+models/*.zip
+models/*.tar.gz
+models/*.bin
+!models/.gitkeep
+
+# Biometric enrollment photos and local identity databases
+data/enroll/*
+!data/enroll/.gitkeep
+data/db/*
+!data/db/.gitkeep
+
+# Output video recordings & evaluation scenarios
+*.mp4
+*.avi
+*.mkv
+*.mov
+recordings/
+evaluation_results/
+data/scenarios/*.json
+!data/scenarios/.gitkeep
+
+# Logs and temporary files
+*.log
+*.tmp
+scratch/
+test_*.jpg
+camera_*.jpg
+live_*.jpg
